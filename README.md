@@ -1,18 +1,16 @@
-# Niloy Bhowmick
+# Murali Krishna Portfolio
 
 <div align="center">
 
 ![Project Banner](./public/demo.png)
 
 ### Midnight Liquid Glass Portfolio
-*A premium, responsive video editing portfolio built with modern web technologies.*
+*A premium, responsive video editing and motion graphics portfolio built with modern web technologies.*
 
 [![Next.js](https://img.shields.io/badge/Next.js_15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-
-[**🌐 Live Website**](https://www.itsniloy.me)
 
 </div>
 
@@ -23,95 +21,51 @@ This project implements a unique **"Midnight Liquid Glass"** aesthetic, focusing
 -   **Frosted Glass 2.0**: Premium `backdrop-blur-3xl` with milky-white tint for distinct separation.
 -   **Unified Liquid Navigation**: A shapeshifting navbar that fluidly expands to contain mobile menus.
 -   **Dynamic Interactions**: Mouse-following gradients and spotlight effects.
--   **YouTube Integration**: Custom light-weight players with high-quality playback enforcement.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js 22+
-- pnpm package manager
+- npm / pnpm package manager
 
 ### Installation
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/maruf-pfc/niloy-bhowmick.git
-    cd niloy-bhowmick
+    git clone https://github.com/murali12-code/murali-portfolio.git
+    cd murali-portfolio
     ```
 
 2.  **Install dependencies**
     ```bash
-    pnpm install
+    npm install
     ```
 
 3.  **Set up environment variables**
-    ```bash
-    cp .env.example .env
-    ```
-    Add your environment variables:
     ```env
     RESEND_API_KEY=your_resend_api_key_here
-    NEXT_PUBLIC_SITE_URL=https://www.itsniloy.me
+    TO_EMAIL=krishnacanedit@gmail.com
+    FROM_EMAIL=Portfolio Contact <onboarding@resend.dev>
     ```
 
 4.  **Run the development server**
     ```bash
-    pnpm dev
+    npm run dev
     ```
 
 5.  **Open your browser**
     Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Building for Production
-
-```bash
-pnpm build
-pnpm start
-```
-
-### Running Tests
-
-To run the unit test suite once:
-```bash
-pnpm test
-```
-
-To run tests in interactive watch mode:
-```bash
-pnpm run test:watch
-```
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1.  Push code to GitHub.
-2.  Connect repository to Vercel.
-3.  Add environment variables in Vercel dashboard:
-    ```env
-    RESEND_API_KEY=your_production_resend_key
-    NEXT_PUBLIC_SITE_URL=https://www.itsniloy.me
-    ```
-4.  Deploy automatically.
-
-### Other Platforms
--   **Netlify**: Static site deployment with form handling.
--   **AWS Amplify**: Full-stack deployment with API integration.
--   **GitHub Pages**: Static deployment (limited functionality).
-
 ## 📂 Project Structure
 
 ```plaintext
-📦niloy-bhowmick
+📦murali-portfolio
  ┣ 📂public
  ┃ ┣ 📂companies
  ┃ ┣ 📂project-images
  ┃ ┣ 📂tools
  ┃ ┣ 📜demo.png
- ┃ ┣ 📜logo-transparent.png
- ┃ ┣ 📜logo-white.png
- ┃ ┣ 📜niloybhowmick.png
  ┃ ┗ 📜not-found.jpg
  ┣ 📂src
  ┃ ┣ 📂app
@@ -207,12 +161,4 @@ export const videoProjectsData = {
 -   **Backend**: Resend (Email), Server Actions
 -   **Testing**: Vitest (Unit testing)
 
----
 
-<div align="center">
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=maruf-pfc/niloy-bhowmick&type=Date)](https://star-history.com/#maruf-pfc/niloy-bhowmick&Date)
-
-</div>
