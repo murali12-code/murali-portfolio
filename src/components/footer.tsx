@@ -15,28 +15,8 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      name: "YouTube",
-      href: "https://www.youtube.com/@itsniloybhowmick",
-      icon: Youtube,
-    },
-    {
-      name: "Instagram",
-      href: "https://instagram.com/its.niloybhowmick",
-      icon: Instagram,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/niloy-bhowmick",
-      icon: Linkedin,
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: Twitter,
-    },
-    {
       name: "Email",
-      href: "mailto:contact.niloybhowmick@gmail.com",
+      href: "mailto:krishnacanedit@gmail.com",
       icon: Mail,
     },
   ];
@@ -48,12 +28,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              Niloy Bhowmick
+              Murali Krishna
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Video Editor and Motion Graphics Designer passionate about
-              creating visual stories with style, precision, and cinematic
-              magic.
+              Video Editor and Motion Designer focused on creating engaging visual content that combines strong editing, motion, typography, and design.
             </p>
           </div>
 
@@ -102,8 +80,6 @@ export default function Footer() {
                   <a
                     key={link.name}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="group"
                     aria-label={link.name}
                   >
@@ -119,16 +95,8 @@ export default function Footer() {
 
         <div className="border-t border-white/5 mt-16 pt-8 text-center">
           <p className="text-gray-500 text-sm flex items-center justify-center gap-1.5">
-            Made with <Heart className="text-red-500 fill-red-500/20" size={14} /> by{" "}
-            <a
-              href="https://www.linkedin.com/in/mdmarufsarker/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors underline decoration-dotted underline-offset-4"
-            >
-              Md. Maruf Sarker
-            </a>{" "}
-            © {currentYear}
+            Designed & Developed for{" "}
+            <span className="text-gray-300 font-medium">Murali Krishna</span> © {currentYear}
           </p>
         </div>
       </div>

@@ -22,8 +22,12 @@ export const getVideoProjectsByCategory = (
     return getAllVideoProjects();
   }
 
-  const filteredProjects = allVideoProjects.filter((project) =>
-    project.category.includes(category)
+  const filteredProjects = allVideoProjects.filter(
+    (project) =>
+      project.category.includes(category) ||
+      project.software_used?.some(
+        (s) => s.toLowerCase() === category.toLowerCase() || s.toLowerCase().includes(category.toLowerCase())
+      )
   );
 
   return filteredProjects.sort(

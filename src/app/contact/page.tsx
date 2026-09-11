@@ -34,21 +34,26 @@ export default function ContactPage() {
       return;
     }
 
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, message, projectType, timeline, honeypot }),
-    });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message, projectType, timeline, honeypot }),
+      });
 
-    const result = await res.json();
+      const result = await res.json();
 
-    if (res.ok) {
-      toast("Message sent successfully!");
-      form.reset();
-    } else {
-      toast(result.error || "Something went wrong.");
+      if (res.ok) {
+        toast("Message sent successfully!");
+        form.reset();
+      } else {
+        const errorMsg = typeof result.error === "string" ? result.error : "Failed to send message.";
+        toast(errorMsg);
+      }
+    } catch (err) {
+      toast("Error sending message. Please try again or email directly.");
     }
   };
 
@@ -96,27 +101,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
-                      href="mailto:contact.niloybhowmick@gmail.com"
+                      href="mailto:krishnacanedit@gmail.com"
                       className="text-white hover:text-blue-400 transition-colors"
                     >
-                      contact.niloybhowmick@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-green-600 p-3 rounded-lg">
-                    <MessageCircle className="text-white" size={20} />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">WhatsApp</p>
-                    <a
-                      href="https://wa.me/+8801580385556"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-green-400 transition-colors"
-                    >
-                      +88 (015) 803-85556
+                      krishnacanedit@gmail.com
                     </a>
                   </div>
                 </div>
@@ -127,7 +115,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">Available Worldwide (Remote)</p>
+                    <p className="text-white">Andhra Pradesh, India (Remote Available)</p>
                   </div>
                 </div>
 

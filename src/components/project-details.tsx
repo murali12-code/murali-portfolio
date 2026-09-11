@@ -34,6 +34,21 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
     const [showVideo, setShowVideo] = useState(false);
     const embedUrl = getYouTubeEmbedUrl(project.video_link);
 
+    const isDirectVideo = project.video_link && (
+        project.video_link.includes(".mp4") ||
+        project.video_link.includes(".webm") ||
+        project.video_link.includes(".mov") ||
+        project.video_link.includes("r2.dev")
+    );
+
+    const hasVideo = Boolean(project.video_link && project.video_link.trim().length > 0);
+
+    const thumbnailSrc = project.cover_image
+        ? project.cover_image.startsWith("http") || project.cover_image.startsWith("/")
+            ? project.cover_image
+            : `https://img.youtube.com/vi/${project.cover_image}/maxresdefault.jpg`
+        : "/demo.png";
+
     return (
         <div className="min-h-screen pt-32 pb-20 px-4">
             <div className="max-w-6xl mx-auto">
@@ -65,36 +80,44 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                 >
                     <GlassmorphismCard className="p-4 md:p-6">
                         <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-900">
-                            {showVideo && embedUrl ? (
-                                <iframe
-                                    src={`${embedUrl}?autoplay=1&modestbranding=1&rel=0`}
-                                    title={project.video_title}
-                                    className="w-full h-full"
-                                    allowFullScreen
-                                    allow="autoplay; encrypted-media"
-                                />
+                            {hasVideo && showVideo ? (
+                                isDirectVideo ? (
+                                    <video
+                                        src={project.video_link}
+                                        controls
+                                        autoPlay
+                                        playsInline
+                                        className="w-full h-full object-contain bg-black"
+                                    />
+                                ) : embedUrl ? (
+                                    <iframe
+                                        src={`${embedUrl}?autoplay=1&modestbranding=1&rel=0`}
+                                        title={project.video_title}
+                                        className="w-full h-full"
+                                        allowFullScreen
+                                        allow="autoplay; encrypted-media"
+                                    />
+                                ) : null
                             ) : (
                                 <div className="relative w-full h-full">
                                     <Image
-                                        src={
-                                            project.cover_image
-                                                ? `https://img.youtube.com/vi/${project.cover_image}/maxresdefault.jpg`
-                                                : "/placeholder.svg"
-                                        }
+                                        src={thumbnailSrc}
                                         alt={project.video_title}
                                         fill
-                                        className="object-cover"
+                                        className="object-contain bg-black/40"
                                     />
-                                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                                        <Button
-                                            onClick={() => setShowVideo(true)}
-                                            size="lg"
-                                            className="bg-red-600 hover:bg-red-700 cursor-pointer"
-                                        >
-                                            <Play className="mr-2" size={24} />
-                                            Play Video
-                                        </Button>
-                                    </div>
+                                    {hasVideo && (
+                                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                            <Button
+                                                onClick={() => setShowVideo(true)}
+                                                size="lg"
+                                                className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer rounded-full px-8 shadow-xl"
+                                            >
+                                                <Play className="mr-2" size={24} />
+                                                Play Video
+                                            </Button>
+                                        </div>
+                                    )}
                                 </div>
                             )}
                         </div>
@@ -110,14 +133,6 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                 >
                     <GlassmorphismCard className="p-6 md:p-8">
                         <div className="mb-6">
-                            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-end mb-4 gap-4">
-                                {project.duration && (
-                                    <div className="flex items-center text-gray-400 text-sm">
-                                        <Clock className="mr-1" size={14} />
-                                        {project.duration}
-                                    </div>
-                                )}
-                            </div>
                             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">
                                 {project.video_title}
                             </h1>
@@ -191,14 +206,18 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button asChild className="bg-red-600 hover:bg-red-700">
+                            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6">
                                 <a
-                                    href={project.video_link}
+                                    href={hasVideo ? project.video_link : thumbnailSrc}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     <ExternalLink className="mr-2" size={16} />
-                                    Watch on YouTube
+                                    {hasVideo
+                                        ? project.video_link.includes("youtube") || project.video_link.includes("youtu.be")
+                                            ? "Watch on YouTube"
+                                            : "Open Direct Video"
+                                        : "View Full High-Res Asset"}
                                 </a>
                             </Button>
                         </div>

@@ -42,116 +42,100 @@ export const videoEditingSkills = [
     color: "text-cyan-400",
   },
   {
-    name: "Adobe Audition",
-    image_link: "/tools/Adobe_Audition_CC.png",
-    icon: Volume2,
-    description: "Audio editing, noise reduction, and sound enhancement",
-    color: "text-green-400",
+    name: "Adobe Illustrator",
+    image_link: "/tools/Adobe_Illustrator_CC.svg",
+    icon: Palette,
+    description: "Vector illustration, character design, and custom graphic assets",
+    color: "text-amber-400",
+  },
+  {
+    name: "CapCut",
+    image_link: "/tools/CapCut.png",
+    icon: Scissors,
+    description: "Fast-paced short-form video editing, captions, and mobile content creation",
+    color: "text-teal-400",
   },
 ];
 
 export const specializations = [
   {
-    title: "YouTube Content Creation",
+    title: "Short-form Editing",
     skills: [
-      "Retention Editing",
-      "Thumbnail Design",
-      "SEO Optimization",
-      "Analytics Understanding",
-    ],
-    icon: "🎬",
-    description:
-      "Specialized in creating engaging YouTube content that keeps viewers watching",
-  },
-  {
-    title: "Social Media Videos",
-    skills: [
-      "Short-form Content",
       "Vertical Video",
-      "Platform Optimization",
-      "Viral Techniques",
+      "Reels & Shorts",
+      "Dynamic Captions",
+      "Pacing & Retention",
     ],
     icon: "📱",
     description:
-      "Expert in creating content optimized for Instagram, TikTok, and other platforms",
+      "Creating fast-paced, high-retention vertical videos optimized for Instagram, YouTube Shorts, and TikTok",
   },
   {
-    title: "Corporate Videos",
-    skills: [
-      "Professional Presentation",
-      "Brand Consistency",
-      "Clean Aesthetics",
-      "Message Clarity",
-    ],
-    icon: "🏢",
-    description:
-      "Creating polished corporate content that communicates effectively",
-  },
-  {
-    title: "Educational Content",
-    skills: [
-      "Screen Recording",
-      "Tutorial Structure",
-      "Clear Explanations",
-      "Interactive Elements",
-    ],
-    icon: "📚",
-    description:
-      "Specialized in making complex topics easy to understand through video",
-  },
-  {
-    title: "Motion Graphics",
-    skills: [
-      "2D Animation",
-      "Logo Animation",
-      "Lower Thirds",
-      "Kinetic Typography",
-    ],
-    icon: "✨",
-    description: "Creating eye-catching animations that enhance storytelling",
-  },
-  {
-    title: "Color Grading",
+    title: "Colour Grading",
     skills: [
       "Cinematic Looks",
-      "Color Matching",
-      "Mood Creation",
-      "Technical Correction",
+      "Color Correction",
+      "Shot Matching",
+      "Mood & Tone",
     ],
     icon: "🎨",
     description:
-      "Professional color work that gives videos a polished, cinematic feel",
+      "Professional color grading and correction to give videos a rich, cinematic visual quality",
+  },
+  {
+    title: "Explainer Videos",
+    skills: [
+      "Visual Storytelling",
+      "Kinetic Typography",
+      "Graphic Callouts",
+      "Script Pacing",
+    ],
+    icon: "💡",
+    description:
+      "Simplifying complex concepts into engaging visual stories using motion graphics and structured editing",
+  },
+  {
+    title: "Montages",
+    skills: [
+      "Beat Syncing",
+      "Dynamic Transitions",
+      "Rhythm Editing",
+      "Sound Design",
+    ],
+    icon: "⚡",
+    description:
+      "High-energy rhythm editing, beat matching, and seamless transition sequences for impactful visual showcases",
   },
 ];
 
 export const achievements = [
   {
-    title: "50+ Projects Completed",
+    title: "20+ Video Edits",
     description:
-      "Successfully delivered over 100 video projects across various industries",
-    icon: Award,
+      "Completed over 20+ video editing projects focusing on pacing and storytelling",
+    icon: Film,
     color: "text-yellow-400",
   },
   {
-    title: "Happy Clients",
+    title: "5+ Motion Projects",
     description:
-      "Built strong client relationships with positive feedback and lasting partnerships",
-    icon: Users,
-    color: "text-green-400",
+      "Created 5+ motion graphics and kinetic typography animations",
+    icon: Sparkles,
+    color: "text-purple-400",
   },
   {
-    title: "3+ Years Experience",
+    title: "5+ Creative Tools",
     description:
-      "Professional video editing experience with continuous skill development",
+      "Mastered Premiere Pro, After Effects, DaVinci Resolve, Photoshop, and Illustrator",
     icon: Camera,
     color: "text-blue-400",
   },
   {
-    title: "Fast Turnaround",
+    title: "50+ Personal Projects",
     description:
-      "Known for delivering high-quality work within tight deadlines",
-    icon: Zap,
-    color: "text-purple-400",
+      "Extensive library of personal creative experiments and video concepts",
+    icon: Award,
+    color: "text-green-400",
   },
 ];
 

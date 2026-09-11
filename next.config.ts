@@ -6,6 +6,18 @@ const nextConfig = {
         protocol: "https",
         hostname: "img.youtube.com",
       },
+      {
+        protocol: "https",
+        hostname: "pub-78840538994f48aa9dc0057cf1e91755.r2.dev",
+      },
+      {
+        protocol: "https",
+        hostname: "*.r2.dev",
+      },
+      {
+        protocol: "https",
+        hostname: "*.cloudflarestorage.com",
+      },
     ],
   },
   async headers() {
