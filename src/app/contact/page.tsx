@@ -294,7 +294,7 @@ export default function ContactPage() {
                 </Button>
               </form>
 
-              <div className="mt-6 pt-6 border-t border-gray-700">
+              {/* <div className="mt-6 pt-6 border-t border-gray-700">
                 <p className="text-gray-400 text-sm text-center">
                   Prefer to chat directly? Reach out on{" "}
                   <a
@@ -307,7 +307,7 @@ export default function ContactPage() {
                   </a>{" "}
                   for instant communication.
                 </p>
-              </div>
+              </div> */}
             </GlassmorphismCard>
           </m.div>
         </div>
